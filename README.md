@@ -5,15 +5,9 @@ This project simulates a simple GPU environment using C++ and Docker, running on
 ![Screenshot 2024-10-01 140406](https://github.com/user-attachments/assets/b23215ad-7c87-4419-9a88-24ce80d0894d)
 
 ## Project Overview
-
-This application simulates a GPU system with multiple cores and memory banks. The main components include:
-- **GPU Core Simulation**: Each core can run tasks and maintain an idle or busy state.
-- **Memory Bank Simulation**: Simulates memory banks that support reading and writing values.
-- **Round-Robin Scheduler**: Distributes tasks across multiple cores in a round-robin fashion.
-
 The application is containerized using Docker and can be deployed in a cloud environment using AWS ECS (Elastic Container Service).
 
-## Project Components
+This application simulates a GPU system with multiple cores and memory banks. The main components include:
 
 ### 1. **GPU Core (`GpuCore` class)**
    - Each core has an ID and can execute tasks.
@@ -28,17 +22,17 @@ The application is containerized using Docker and can be deployed in a cloud env
    - Distributes tasks across available GPU cores.
    - Uses a round-robin algorithm to assign tasks to cores, ensuring balanced load distribution.
 
-## Getting Started
-
-### Prerequisites
+## Technologies Used
 
 - **Windows Subsystem for Linux (WSL)**
-- **Docker**
-- **AWS CLI** and **AWS Account** (for cloud deployment)
-- **Visual Studio Code** (optional for code editing)
+- **C++**: For core GPU simulation logic (scheduling, memory management, etc.).
+- **Docker**: To containerize the application and run it in isolated environments.
+- **AWS ECS (Elastic Container Service)**: For running the containerized application in the cloud.
+- **AWS ECR (Elastic Container Registry)**: To store and manage Docker images.
+- **Windows Subsystem for Linux (WSL)**: For a Linux environment within Windows for local development.
+- **Visual Studio Code**: As the IDE for writing and editing the code.
+- **Git & GitHub**: For version control and code hosting.
 
-### Setting Up WSL
 
-1. Install **WSL 2**:
-   ```bash
-   wsl --install
+
+
